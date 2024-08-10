@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Course;
 
 class CourseController extends Controller
 {
@@ -27,7 +28,19 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->extension();
+        $image->move(public_path('img'), $imageName);
+
+        $course = New Course;
+
+        $course->judul = $request->judul;
+        $course->deskripsi = $request->deskripsi;
+        $course->durasi = $request->durasi;
+        $course->image = $imageName;
+
+        $course->save();
+        return redirect('/dashadmin')->with('success', 'Course Added');
     }
 
     /**

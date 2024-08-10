@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MateriController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +19,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
+Route::get('/login', [AuthController::class, 'viewLogin'])->name('login')->middleware('guest');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 Route::get('/test', function () {
     return view('kursus-page');
 });
+
+Route::get('/course/{course}', [CourseController::class, 'show']);
+Route::get('/course/{course}/materi', [MateriController::class, 'index']);
+Route::post('/course/store', [CourseController::class, 'store'])->name('kursus.store');
+
+
+Route::get('/dashadmin', [AdminController::class, 'index'])->name('dashadmin')->middleware('auth', 'admin');
+
+Route::get('/home', [UserController::class, 'index'])->name('home')->middleware(['auth']);
