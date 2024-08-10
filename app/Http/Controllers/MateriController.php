@@ -9,9 +9,13 @@ class MateriController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function getMateriByCourse($courseId)
     {
-        //
+        // Ambil semua materi yang berhubungan dengan courseId
+        $materi = Materi::where('course_id', $courseId)->get();
+
+        // Kembalikan data sebagai JSON
+        return response()->json($materi);
     }
 
     /**

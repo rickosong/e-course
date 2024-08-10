@@ -72,6 +72,8 @@ class CourseController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Course::find($id)->delete();
+
+        return redirect('/dashadmin')->with('success', 'Course Deleted');
     }
 }

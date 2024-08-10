@@ -30,8 +30,11 @@ Route::get('/test', function () {
 });
 
 Route::get('/course/{course}', [CourseController::class, 'show']);
-Route::get('/course/{course}/materi', [MateriController::class, 'index']);
 Route::post('/course/store', [CourseController::class, 'store'])->name('kursus.store');
+Route::delete('/course/destroy', [CourseController::class, 'destroy'])->name('kursus.destroy');
+
+// Route::get('/course/{course}/materi', [MateriController::class, 'index']);
+Route::get('/materi/{courseId}', [MateriController::class, 'getMateriByCourse']);
 
 
 Route::get('/dashadmin', [AdminController::class, 'index'])->name('dashadmin')->middleware('auth', 'admin');

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Course;
+use App\Models\Materi;
 
 class UserController extends Controller
 {
@@ -11,7 +13,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view ('home');
+        return view ('home', [
+            'courses' => Course::all(),
+        ]);
     }
 
     /**
