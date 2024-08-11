@@ -18,7 +18,7 @@ Halaman Dashboard Admin dan Tampilan Kursus
 
 Tambah Kursus
 
-![Modal Tambah Kursus](https://github.com/rickosong/e-course/blob/main/screenshots/modal-tambah-kursus.png)
+![Modal Tambah Kursus](https://github.com/rickosong/e-course/blob/main/screenshot/modal-tambah-kursus.png)
 
 Halaman Edit Kursus
 
