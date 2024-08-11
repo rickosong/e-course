@@ -1,0 +1,8 @@
+<nav class="bg-gray-700 text-white p-4 flex justify-between items-center">
+    <p class="text-md font-semibold"><a href="{{ route('home') }}">E-Course</a></p>
+    {{-- <span class="text-md font-regular text-end">Selamat datang, {{ auth()->user()->name }}</span> --}}
+    <form action="{{ route('logout') }}" method="post">
+        @csrf
+        <button type="submit" class="bg-red-500 hover:bg-red-600 text-white text-sm font-semibold py-2 px-4 rounded">Logout</button>
+    </form>
+</nav>

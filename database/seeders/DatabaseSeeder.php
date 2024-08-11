@@ -25,5 +25,8 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('passwordUser'),
             'role' => 'user',
         ]);
+
+        $this->call(CourseSeeder::class);
+        $this->call(MateriSeeder::class);
     }
 }

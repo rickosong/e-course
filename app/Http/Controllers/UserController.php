@@ -13,8 +13,19 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view ('home', [
+        $materiCount = Materi::count();
+        return view ('home', compact('materiCount'), [
             'courses' => Course::all(),
+        ]);
+    }
+
+    public function courseMateri($id)
+    {
+        $materi = Materi::where('course_id', $id)->get();
+        $courseName = Course::where('id', $id)->pluck('judul');
+        $courseName = $courseName[0];
+        return view('course-materi', compact('courseName'), [
+            'materis' => $materi
         ]);
     }
 
@@ -39,7 +50,11 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $materi = Materi::findORFail($id);
+
+        return view('show-materi', [
+            'materi' => $materi
+        ]);
     }
 
     /**

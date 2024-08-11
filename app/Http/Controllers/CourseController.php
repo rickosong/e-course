@@ -56,7 +56,11 @@ class CourseController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $course = Course::findOrFail($id);
+
+        return view('edit-course', [
+            'course' => $course
+        ]);
     }
 
     /**
@@ -64,7 +68,24 @@ class CourseController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $course = Course::findOrFail($id);
+
+        $course->judul = $request->judul;
+        $course->deskripsi = $request->deskripsi;
+        $course->durasi = $request->durasi;
+        
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->extension();
+            $image->move(public_path('img'), $imageName);
+            
+            $course->image = $imageName;
+        } else {
+            $course->image = $course->image;
+        }
+
+        $course->update();
+        return redirect('/dashadmin')->with('success', ' Updated');
     }
 
     /**

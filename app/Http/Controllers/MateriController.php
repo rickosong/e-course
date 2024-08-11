@@ -3,19 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Materi;
+use App\Models\Course;
 
 class MateriController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function getMateriByCourse($courseId)
+    public function index($courseId)
     {
-        // Ambil semua materi yang berhubungan dengan courseId
+        // Ambil semua materi yang berhubungan dengan materiId
         $materi = Materi::where('course_id', $courseId)->get();
+        $courseName = Course::where('id', $courseId)->pluck('judul');
+        $courseName = $courseName[0];
+        $courseId = $courseId;
 
         // Kembalikan data sebagai JSON
-        return response()->json($materi);
+        return view('materi', compact('courseId', 'courseName'), [
+            'materis' => $materi
+        ]);
     }
 
     /**
@@ -31,7 +38,20 @@ class MateriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->extension();
+        $image->move(public_path('img'), $imageName);
+
+        $materi = New Materi;
+
+        $materi->course_id = $request->course_id;
+        $materi->judul = $request->judul;
+        $materi->deskripsi = $request->deskripsi;
+        $materi->link = $request->link;
+        $materi->image = $imageName;
+
+        $materi->save();
+        return redirect('/course/' . $materi->course_id . '/materi')->with('success', 'Materi Added');
     }
 
     /**
@@ -47,7 +67,12 @@ class MateriController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $materi = Materi::findOrFail($id);
+
+        return view('edit-materi', [
+            'materi' => $materi
+        ]);
+
     }
 
     /**
@@ -55,7 +80,25 @@ class MateriController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $materi = Materi::findOrFail($id);
+
+        $materi->course_id = $request->course_id;
+        $materi->judul = $request->judul;
+        $materi->deskripsi = $request->deskripsi;
+        $materi->link = $request->link;
+        
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->extension();
+            $image->move(public_path('img'), $imageName);
+            
+            $materi->image = $imageName;
+        } else {
+            $materi->image = $materi->image;
+        }
+
+        $materi->update();
+        return redirect('/course/' . $materi->course_id . '/materi')->with('success', 'Materi Updated');
     }
 
     /**
@@ -63,6 +106,11 @@ class MateriController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $materi = materi::find($id);
+        $materi->delete();
+
+        return redirect('/course/' . $materi->course_id . '/materi')->with('success', 'Materi Updated');
     }
+
+    
 }
