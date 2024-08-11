@@ -26,7 +26,7 @@ Halaman Edit Kursus
 
 Halaman Dashboard Materi
 
-![Halaman Dashboard Materi](https://github.com/rickosong/e-course/blob/main/screenshots/halaman-dashboard-materi.png)
+![Halaman Dashboard Materi](https://github.com/rickoson/e-course/blob/main/screenshots/halaman-dashboard-materi.png)
 
 Tambah Materi
 
