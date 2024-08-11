@@ -18,14 +18,14 @@ class MateriSeeder extends Seeder
             'judul' => 'Intro',
             'deskripsi' => 'Intro untuk belajar laravel 11',
             'link' => 'https://www.youtube.com/embed/T1TR-RGf2Pw?si=kQs-IVH-XvPpDS-P',
-            'image' => 'hqdefault (3).webp',
+            'image' => 'hqdefault.webp',
         ]);
         Materi::create([
             'course_id' => 1,
             'judul' => 'Instalasi & konfigurasi',
             'deskripsi' => 'Instalasi dan konfigurasi untuk belajar Laravel 11',
             'link' => 'https://www.youtube.com/embed/nW60yGRoUrs?si=XYqFmp3IUYDmKJuD',
-            'image' => 'hqdefault (4).webp',
+            'image' => 'hqdefault (3).webp',
         ]);
         Materi::create([
             'course_id' => 1,

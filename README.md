@@ -42,9 +42,9 @@ Halaman Beranda (homepage)
 
 Halaman Materi Kursus
 
-![Halaman Materi Kursus](https://github.com/rickosong/e-course/blob/main/screenshots/halaman-materi.png)
+![Halaman Materi Kursus](https://github.com/rickosong/e-course/blob/main/screenshots/halaman-mat.png)
 
 Halaman Show/isi Materi
 
-![Halaman Show/isi Materi](https://github.com/rickosomg/e-course/blob/main/screenshots/halaman-show-materi.png)
+![Halaman Show/isi Materi](https://github.com/rickosong/e-course/blob/main/screenshots/halaman-show-materi.png)
 
