@@ -29,8 +29,8 @@ class MateriSeeder extends Seeder
         ]);
         Materi::create([
             'course_id' => 1,
-            'judul' => 'Dasar Pemrograman dengan Javascript',
-            'deskripsi' => 'Ini adalah kursus beripa kumpulan materi video yang mana materinya adalah Dasar pemrograman dengan javascript',
+            'judul' => 'Blade PHP',
+            'deskripsi' => 'memahami cara kerja blade php di laravel 11',
             'link' => 'https://www.youtube.com/embed/x55ndgkD2QI?si=UP1ovc_rEwW9ZyLO',
             'image' => 'hqdefault (5).webp',
         ]);
