@@ -38,7 +38,7 @@
                                                     @csrf
                                                     @method('delete')
                                                     <input type="hidden" name="course_id" value="{{ $courseId }}">
-                                                    <button type="submit" class="bg-red-500 hover:bg-red-600 text-white text-sm py-2 px-4 rounded">Hapus</button>
+                                                    <button type="submit" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Materi Ini?')" class="bg-red-500 hover:bg-red-600 text-white text-sm py-2 px-4 rounded">Hapus</button>
                                                 </form>
                                             </div>
                                         </div>

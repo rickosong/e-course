@@ -54,7 +54,7 @@
                                             <form action="{{ route('kursus.destroy', $course->id) }}" method="post">
                                                 @csrf
                                                 @method('delete')
-                                                <button type="submit" class="bg-red-500 hover:bg-red-600 text-white text-sm py-2 px-4 rounded">Hapus</button>
+                                                <button type="submit"  onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Kursus Ini?')" class="bg-red-500 hover:bg-red-600 text-white text-sm py-2 px-4 rounded">Hapus</button>
                                             </form>
                                         </div>
                                     </div>
