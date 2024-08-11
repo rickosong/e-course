@@ -10,7 +10,7 @@ Teknologi yang digunakan:
 
 Halaman Login
 
-![Halaman login](https://github.com/rickosong/e-course/blob/mmain/screenshot/halaman-login.png)
+![Halaman login](https://github.com/rickosong/e-course/blob/main/screenshot/halaman-login.png)
 
 Halaman Dashboard Admin dan Tampilan Kursus
 
