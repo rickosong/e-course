@@ -12,7 +12,7 @@
         @include('partials.navbar')
     </div>
 
-    <div class="container mx-auto px-8 py-4 mb-20">
+    <div class="container mx-auto px-[300px] py-4 mb-20">
         <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
         </div>
         <div class="mx-auto mt-4 mb-8">

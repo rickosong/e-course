@@ -9,7 +9,7 @@
 <body class="bg-gray-100">
 
     <div class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
-        <h1 class="text-2xl font-bold mb-4 text-gray-800">Edit Materi</h1>
+        <h1 class="text-2xl font-bold mb-4 text-gray-800">Edit Kursus</h1>
 
         <form action="{{ route('kursus.update', $course->id) }}" method="post" class="p-4 md:p-5" enctype="multipart/form-data">
             @csrf
