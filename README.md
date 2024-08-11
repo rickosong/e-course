@@ -26,13 +26,17 @@ Halaman Edit Kursus
 
 Halaman Dashboard Materi
 
-![Halaman Dashboard Materi](https://github.com/bhaktiramadhani/platform-kursus/blob/main/screenshots/halaman-dashboard-materi.png)
+![Halaman Dashboard Materi](https://github.com/rickosong/e-course/blob/main/screenshots/halaman-dashboard-materi.png)
 
 Tambah Materi
 
-![Tambah Materi](https://github.com/bhaktiramadhani/platform-kursus/blob/main/screenshots/modal-tambah-materi.png)
+![Tambah Materi](https://github.com/rickosong/e-course/blob/main/screenshots/modal-tambah-materi.png)
 
 Halaman Edit Materi
 
-![Halaman Edit Materi](https://github.com/bhaktiramadhani/platform-kursus/blob/main/screenshots/halaman-edit-materi.png)
+![Halaman Edit Materi](https://github.com/rickosong/e-course/blob/main/screenshots/halaman-edit-materi.png)
+
+Halaman Beranda (homepage)
+
+![Halaman Beranda (homepage)](https://github.com)
 
