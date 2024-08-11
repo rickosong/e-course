@@ -38,5 +38,13 @@ Halaman Edit Materi
 
 Halaman Beranda (homepage)
 
-![Halaman Beranda (homepage)](https://github.com)
+![Halaman Beranda (homepage)](https://github.com/rickosong/e-course/blob/main/screenshots/halaman-home.png)
+
+Halaman Materi Kursus
+
+![Halaman Materi Kursus](https://github.com/rickosong/e-course/blob/main/screenshots/halaman-materi.png)
+
+Halaman Show/isi Materi
+
+![Halaman Show/isi Materi](https://github.com/rickosomg/e-course/blob/main/screenshots/halaman-show-materi.png)
 
